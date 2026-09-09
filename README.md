@@ -9,6 +9,6 @@ A responsive personal portfolio built with plain HTML, CSS, and JavaScript.
 - `script.js` — mobile menu, scroll effects, reveal animations, back-to-top button
 - `images/` — project screenshots here
 - `resume/` — PDF resume here
-- 'certificates/' - all certificates here
+- `certificates/` - all certificates here
 
 
