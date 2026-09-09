@@ -49,13 +49,6 @@ const projectGalleries = {
   pc: {
     title: "PC Troubleshooting & Maintenance",
     images: [
-      "images/pc-01.jpg",
-      "images/pc-02.jpg"
-    ]
-  }
-  pc: {
-    title: "PC Troubleshooting & Maintenance",
-    images: [
       "images/pc-rufus.png",
       "images/pc-boot-sequence.jpg",
       "images/pc-boot.jpg",
