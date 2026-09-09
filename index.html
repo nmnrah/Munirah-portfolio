@@ -10,6 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Gallery Modal (add once, near end of body) -->
+<div id="galleryModal" class="gallery-modal">
+  <div class="gallery-modal-content">
+    <button class="gallery-close" onclick="closeGallery()">&times;</button>
+    <h3 id="galleryTitle"></h3>
+    <div id="galleryGrid" class="gallery-grid"></div>
+  </div>
+</div>
+
+<!-- Fullscreen single image viewer -->
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+</div>
+  
 </head>
   <!-- Sticky NavBar -->
 <body>
@@ -393,5 +411,6 @@
 
   <button class="back-to-top" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
+  
 </body>
 </html>
