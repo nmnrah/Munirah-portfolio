@@ -53,7 +53,15 @@ const projectGalleries = {
       "images/pc-02.jpg"
     ]
   }
-  // add more projects here the same way
+  pc: {
+    title: "PC Troubleshooting & Maintenance",
+    images: [
+      "images/pc-rufus.png",
+      "images/pc-boot-sequence.jpg",
+      "images/pc-boot.jpg",
+      "images/motherboard-skru.jpg",
+    ]
+  },
 };
 
 let currentGallery = [];
