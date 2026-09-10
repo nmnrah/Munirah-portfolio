@@ -156,3 +156,21 @@ footer{border-top:1px solid var(--border);padding:25px 0;color:#657080;font-size
 .lightbox-close { top: 20px; right: 30px; }
 .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
 .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+.case-study-content { max-width: 700px; }
+
+.cs-section { margin-bottom: 20px; }
+.cs-section h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #58e6b4;
+  margin-bottom: 6px;
+}
+.cs-section p, .cs-section li {
+  color: #c9d1d9;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.cs-section ul { margin: 0; padding-left: 18px; }
+.cs-links { display: flex; gap: 12px; margin-top: 20px; }
