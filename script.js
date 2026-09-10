@@ -97,3 +97,52 @@ function changeImage(direction) {
   currentIndex = (currentIndex + direction + currentGallery.length) % currentGallery.length;
   document.getElementById('lightboxImg').src = currentGallery[currentIndex];
 }
+
+const caseStudies = {
+  homestay: { //will add this later
+    title: "Kota Belud Homestay Management System",
+    summary: "A web-based booking and management system for homestay operators.",
+    objective: "Built as part of my Software Engineering coursework to manage homestay listings and bookings digitally.",
+    stack: "Laravel, PHP, MySQL, JavaScript",
+    role: "Solo project — designed the database schema, built the booking logic, and developed the front-end.",
+    process: [
+      "Planned database structure (homestays, bookings, customers)",
+      "Built backend booking logic in Laravel",
+      "Developed front-end forms and admin views",
+      "Tested booking flow and fixed edge cases"
+    ],
+    challenges: "Handling booking date conflicts was the trickiest part — had to write validation logic to prevent double-booking the same homestay on overlapping dates.",
+    learned: "Learned how to structure a relational database for a real booking system, and how to write server-side validation logic in Laravel.",
+    github: "#",
+    demo: "#"
+  }
+  // add more projects here the same way
+};
+
+function openCaseStudy(key) {
+  const cs = caseStudies[key];
+  if (!cs) return;
+
+  document.getElementById('caseStudyBody').innerHTML = `
+    <h3>${cs.title}</h3>
+    <p style="color:#8b949e; margin-bottom:20px;">${cs.summary}</p>
+
+    <div class="cs-section"><h4>Objective</h4><p>${cs.objective}</p></div>
+    <div class="cs-section"><h4>Tech Stack</h4><p>${cs.stack}</p></div>
+    <div class="cs-section"><h4>My Role</h4><p>${cs.role}</p></div>
+    <div class="cs-section"><h4>Process</h4><ul>${cs.process.map(step => `<li>${step}</li>`).join('')}</ul></div>
+    <div class="cs-section"><h4>Challenges</h4><p>${cs.challenges}</p></div>
+    <div class="cs-section"><h4>What I Learned</h4><p>${cs.learned}</p></div>
+
+    <div class="cs-links">
+      <a class="project-link" href="${cs.github}" target="_blank" rel="noopener">GitHub →</a>
+      <a class="project-link" href="${cs.demo}" target="_blank" rel="noopener">Live Demo →</a>
+    </div>
+  `;
+
+  document.getElementById('caseStudyModal').classList.add('open');
+}
+
+function closeCaseStudy() {
+  document.getElementById('caseStudyModal').classList.remove('open');
+}
