@@ -137,21 +137,24 @@ function openCaseStudy(key) {
   const cs = caseStudies[key];
   if (!cs) return;
 
+  const linksHTML = (cs.github || cs.demo) ? `
+    <div class="cs-links">
+      ${cs.github ? `<a class="project-link" href="${cs.github}" target="_blank" rel="noopener">GitHub →</a>` : ''}
+      ${cs.demo ? `<a class="project-link" href="${cs.demo}" target="_blank" rel="noopener">Live Demo →</a>` : ''}
+    </div>
+  ` : '';
+
   document.getElementById('caseStudyBody').innerHTML = `
     <h3>${cs.title}</h3>
     <p style="color:#8b949e; margin-bottom:20px;">${cs.summary}</p>
 
     <div class="cs-section"><h4>Objective</h4><p>${cs.objective}</p></div>
-    <div class="cs-section"><h4>Tech Stack</h4><p>${cs.stack}</p></div>
+    <div class="cs-section"><h4>Tools Used</h4><p>${cs.stack}</p></div>
     <div class="cs-section"><h4>My Role</h4><p>${cs.role}</p></div>
     <div class="cs-section"><h4>Process</h4><ul>${cs.process.map(step => `<li>${step}</li>`).join('')}</ul></div>
-    <div class="cs-section"><h4>Challenges</h4><p>${cs.challenges}</p></div>
+    <div class="cs-section"><h4>Challenges & Fix</h4><p>${cs.challenges}</p></div>
     <div class="cs-section"><h4>What I Learned</h4><p>${cs.learned}</p></div>
-
-    <div class="cs-links">
-      <a class="project-link" href="${cs.github}" target="_blank" rel="noopener">GitHub →</a>
-      <a class="project-link" href="${cs.demo}" target="_blank" rel="noopener">Live Demo →</a>
-    </div>
+    ${linksHTML}
   `;
 
   document.getElementById('caseStudyModal').classList.add('open');
