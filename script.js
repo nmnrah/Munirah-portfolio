@@ -115,8 +115,22 @@ const caseStudies = {
     learned: "Learned how to structure a relational database for a real booking system, and how to write server-side validation logic in Laravel.",
     github: "#",
     demo: "#"
+  },
+  pc: {
+    title: "PC Troubleshooting & Maintenance",
+    summary: "Clean Windows 11 installation via bootable USB, including diagnosing and fixing a boot configuration issue.",
+    objective: "Perform a clean installation of Windows 11 using a bootable USB drive, as part of SKM Tahap 3 coursework practice.",
+    stack: "Bootable USB (Windows 11 installer), BIOS/UEFI setup utility",
+    role: "Solo — carried out the full installation and diagnosed a boot issue independently.",
+    process: [
+      "Created a bootable Windows 11 USB installer",
+      "Booted the target PC from the USB device",
+      "Followed the setup wizard — partition selection, formatting, and installation",
+      "Completed the OS installation successfully"
+    ],
+    challenges: "After installation, removing the bootable USB caused the PC to fail to find a bootable drive. This pointed to a boot order/BIOS configuration issue rather than a failed install — the system was still set to boot from USB/removable media first instead of the internal drive. Fixed by entering BIOS settings and changing the boot priority to set the internal drive as primary, then confirmed the PC booted properly into Windows 11 without the USB connected.",
+    learned: "How to create and use bootable installation media, the Windows 11 installation process, and diagnosing a boot issue by checking BIOS boot order rather than assuming a failed install — an important distinction for real troubleshooting."
   }
-  // add more projects here the same way
 };
 
 function openCaseStudy(key) {
