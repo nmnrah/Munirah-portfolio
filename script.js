@@ -52,7 +52,10 @@ const projectGalleries = {
       "images/pc-rufus.png",
       "images/pc-boot-sequence.jpg",
       "images/pc-boot.jpg",
-      "images/motherboard-skru.jpg"
+      "images/pc-mbr.jpg",
+      "images/pc-windows-edition.jpg",
+      "images/pc-disk-partition.jpg",
+      "images/pc-password.jpg"
     ]
   },
 };
