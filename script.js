@@ -155,7 +155,38 @@ const caseStudies = {
     ],
     challenges: "The virtual server initially had difficulty reaching a physical network printer because the VM and printer were on different network segments. Addressed this by adding a second NAT network adapter and configuring a static route. The Windows 10 client also received its IP address from VMware's DHCP service instead of the lab server, so VMware DHCP was disabled to allow the lab DHCP server to respond. Additionally, troubleshot Group Policy settings that did not apply as expected and domain login issues involving the correct user login format.",
     learned: "Gained practical experience with Windows Server administration, domain-based user and permission management, DNS and DHCP services, Group Policy, file and print sharing, IIS, FTP, and virtual network troubleshooting. Learned how DHCP conflicts, routing between network segments, policy configuration, and domain login formats can affect client connectivity and administration."
-  }
+  },
+  cable: {
+  title: "Cat6 Straight-Through Ethernet Cable",
+
+  summary:
+    "Prepared and tested a Cat6 straight-through Ethernet cable using the T-568B wiring standard.",
+
+  objective:
+    "Practise Ethernet cable termination by preparing a Cat6 UTP cable, installing RJ45 connectors, and verifying the connection using a network cable tester as part of SKM Tahap 3 coursework at GIATMARA Tuaran.",
+
+  stack:
+    "Cat6 UTP cable, RJ45 connectors, crimping tool, wire stripper, network cable tester",
+
+  role:
+    "Solo practical assignment — prepared, terminated, crimped, and tested the cable.",
+
+  process: [
+    "Measured and cut approximately 1.5 metres or more of Cat6 UTP cable.",
+    "Removed the outer jacket and prepared the internal wire pairs.",
+    "Arranged all eight wires according to the T-568B colour sequence.",
+    "Trimmed the wire ends evenly and inserted them into RJ45 connectors.",
+    "Crimped both ends using the same T-568B wiring sequence to create a straight-through cable.",
+    "Connected both ends to the master and remote units of a network cable tester.",
+    "Checked the LED indicators for pins 1 through 8 on both tester units."
+  ],
+
+  challenges:
+    "The main challenge was arranging the eight wires in the correct colour sequence and inserting them fully into the RJ45 connectors before crimping. Proper cable preparation was important to ensure the connector contacts aligned with the individual wires.",
+
+  learned:
+    "Learned how to prepare and terminate Cat6 UTP cable, follow the T-568B wiring standard, crimp RJ45 connectors, and verify cable continuity using a network cable tester. The test showed matching LED sequences for pins 1 through 8 on both tester units, and the practical report recorded the result as successful."
+},
 };
 
 function openCaseStudy(key) {
