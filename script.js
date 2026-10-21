@@ -133,6 +133,25 @@ const caseStudies = {
     ],
     challenges: "After installation, removing the bootable USB caused the PC to fail to find a bootable drive. This pointed to a boot order/BIOS configuration issue rather than a failed install — the system was still set to boot from USB/removable media first instead of the internal drive. Fixed by entering BIOS settings and changing the boot priority to set the internal drive as primary, then confirmed the PC booted properly into Windows 11 without the USB connected.",
     learned: "How to create and use bootable installation media, the Windows 11 installation process, and diagnosing a boot issue by checking BIOS boot order rather than assuming a failed install — an important distinction for real troubleshooting."
+  },
+  server: {
+    title: "Windows Server 2012 R2 Domain Network",
+    summary: "Built and configured a domain-based network in VMware using Windows Server 2012 R2 and a Windows 10 client.",
+    objective: "Practise Windows Server administration, domain management, network services, and troubleshooting as part of SKM Tahap 3 coursework at GIATMARA Tuaran.",
+    stack: "Windows Server 2012 R2, Windows 10, VMware Workstation, Active Directory Domain Services (AD DS), DNS, DHCP, Group Policy, IIS, FTP",
+    role: "Solo lab practice — configured and tested server and client services in a virtualised environment.",
+    process: [
+      "Installed Active Directory Domain Services (AD DS) and DNS, then created the myserver2.com domain",
+      "Joined a Windows 10 client to the domain",
+      "Created organisational units (OUs), user accounts and groups, configured delegated control, and set logon hours",
+      "Applied Group Policy settings to restrict what domain users could access or change on their desktops",
+      "Configured shared folders, access permissions, mapped network drives, home folders, and 100 MB disk quotas per user",
+      "Installed and shared a physical network printer, published it in Active Directory, and tested printing from both server and client",
+      "Configured a DHCP scope with an exclusion range and an 8-hour lease, then verified client IP address assignment",
+      "Hosted a website using IIS and configured an FTP server with user-group permissions, then tested file uploads from the client"
+    ],
+    challenges: "The virtual server initially had difficulty reaching a physical network printer because the VM and printer were on different network segments. Addressed this by adding a second NAT network adapter and configuring a static route. The Windows 10 client also received its IP address from VMware's DHCP service instead of the lab server, so VMware DHCP was disabled to allow the lab DHCP server to respond. Additionally, troubleshot Group Policy settings that did not apply as expected and domain login issues involving the correct user login format.",
+    learned: "Gained practical experience with Windows Server administration, domain-based user and permission management, DNS and DHCP services, Group Policy, file and print sharing, IIS, FTP, and virtual network troubleshooting. Learned how DHCP conflicts, routing between network segments, policy configuration, and domain login formats can affect client connectivity and administration."
   }
 };
 
