@@ -58,6 +58,9 @@ const projectGalleries = {
       "images/pc-password.jpg"
     ]
   },
+  server: {
+    
+  }
 };
 
 let currentGallery = [];
