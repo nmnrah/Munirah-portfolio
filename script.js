@@ -58,6 +58,19 @@ const projectGalleries = {
       "images/pc-password.jpg"
     ]
   },
+  cable: {
+    title: "Cat6 Straight Through Cable", 
+    images: [
+      "imager/cable-1.jpg",
+      "imager/cable-2.jpg",
+      "imager/cable-3.jpg",
+      "imager/cable-4.jpg",
+      "imager/cable-5.jpg",
+      "imager/cable-6.jpg",
+      "imager/cable-7.jpg",
+      "imager/cable-8.jpg",
+    ]
+  },
   server: {
     
   }
